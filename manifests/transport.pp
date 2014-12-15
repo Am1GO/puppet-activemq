@@ -31,7 +31,7 @@
 # === Copyright
 # Steve Traylen, CERN, 2014, steve.traylen@cern.ch
 #
-define activemq::transport ($uri, $name=$title, $configfile = $::activemq::configfile)
+define activemq::transport ($uri, $configfile = $::activemq::configfile)
 {
 
   validate_string($name)
