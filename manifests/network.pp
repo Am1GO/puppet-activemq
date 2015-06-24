@@ -86,7 +86,7 @@
 # Steve Traylen, CERN, 2014 , steve.traylen@cern.ch
 #
 define activemq::network ($excludedDestinationsType,$excludedDestinationsPath,$uri,$username,
-  $password,$name=$title, $configfile = $::activemq::configfile,
+  $password,$configfile = $::activemq::configfile,
   $duplex = false,
   $decreaseNetworkConsumerPriority = true,
   $networkTTL = '2',
