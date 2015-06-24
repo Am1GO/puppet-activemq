@@ -23,7 +23,7 @@
     "templates/credentials.properties.erb": "1279ad5295762c287a0425fb2155d9bd"
   },
   "name": "CERNOps-activemq",
-  "author": "CERNOps",
+  "author": "AmiGO",
   "summary": "Configures Apache MQ",
   "description": "Configures Apache MQ",
   "dependencies": [
