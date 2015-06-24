@@ -8,17 +8,17 @@ class activemq::config inherits activemq {
   
     datacat{$credentials:
        template => "activemq/credentials.properties.erb",
-       owner => 'root',
-       group => 'root',
-       mode  => '0644'
+       owner   => $amquser,
+       group   => $amqgroup,
+       mode    => '0600'
     }
 
     # activemq.xml
     datacat{$configfile:
        template => 'activemq/activemq.xml.erb',
-       owner    => 'root',
-       group    => 'root',
-       mode     => '0644'
+       owner   => $amquser,
+       group   => $amqgroup,
+       mode    => '0600'
     }
 
     datacat_fragment{'insert_single_values':
@@ -76,6 +76,16 @@ class activemq::config inherits activemq {
           File["${configdir}/ssl_credentials/activemq_certificate.pem"]
         ],
       }
+      java_ks { 'activemq_cert:truststore':
+        ensure       => latest,
+        certificate  => "${configdir}/ssl_credentials/ca.pem",
+	trustcacerts => true,
+        target       => "${configdir}/truststore.jks",
+        password     =>  $keystore_pass,
+        require      => [
+          File["${configdir}/ssl_credentials/ca.pem"]
+        ],
+      }
       file{"${configdir}/keystore.jks":
           ensure  => file,
           replace => false,
@@ -84,12 +94,22 @@ class activemq::config inherits activemq {
           mode    => '0600',
           require => Java_ks['activemq_cert:keystore']
       }
+      file{"${configdir}/truststore.jks":
+          ensure  => file,
+          replace => false,
+          owner   => $amquser,
+          group   => $amqgroup,
+          mode    => '0600',
+          require => Java_ks['activemq_ca:truststore']
+      }
       datacat_fragment{'ssl_context':
          target => $configfile,
          data   => { 
                       ssl =>
-                        { 'keyStore'         => "${configdir}/keystore.jks",
-                          'keyStorePassword' => $keystore_pass
+                        { 'keyStore'           => "${configdir}/keystore.jks",
+                          'keyStorePassword'   => $keystore_pass,
+			  'trustStore'         => "${configdir}/truststore.jks",
+                          'trustStorePassword' => $keystore_pass
                         }
 
                    }

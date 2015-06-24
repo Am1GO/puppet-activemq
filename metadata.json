@@ -6,7 +6,7 @@
     "manifests/network.pp": "ff8177a2f5dfd00f6ba120a02fda9ab9",
     "manifests/install.pp": "78b14d3e4fb43085c355adac4d6cf4f4",
     "manifests/params.pp": "cc0cbe37dbd2cca8ecbc328802ff7a62",
-    "manifests/config.pp": "c9858d9de1c6a44b84e7fb8b5a751b9a",
+    "manifests/config.pp": "e1c7b4b1b3ea1e80e5ed1dd51e380aa1",
     "tests/init.pp": "401661128c93f331d6f2e9d801c03c64",
     "README.md": "3b027680d196445a353acf9c6e336775",
     "manifests/user.pp": "fa6c8b10a08b1db281bf49993ffba8d8",
@@ -41,7 +41,7 @@
     }
   ],
   "project_page": "http://github.com/cernops/activemq",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "types": [
 
   ]
