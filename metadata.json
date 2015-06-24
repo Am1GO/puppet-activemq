@@ -3,7 +3,7 @@
   "source": "http://github.com/cernops/activemq",
   "checksums": {
     "Rakefile": "ea715fe0328d4fb4bc6de3aae2d67b11",
-    "manifests/network.pp": "5c118a76c8f8aa814fb6dbd82ade48a4",
+    "manifests/network.pp": "ff8177a2f5dfd00f6ba120a02fda9ab9",
     "manifests/install.pp": "78b14d3e4fb43085c355adac4d6cf4f4",
     "manifests/params.pp": "cc0cbe37dbd2cca8ecbc328802ff7a62",
     "manifests/config.pp": "c9858d9de1c6a44b84e7fb8b5a751b9a",
@@ -18,7 +18,7 @@
     "CHANGELOG": "d10b3a4004a5d033942e7a9b2d20b8ec",
     "Modulefile": "61ba73377261a5839e1255ba3a78fc66",
     "manifests/policy.pp": "d211055e766b302f1394a54b51dc3bf2",
-    "manifests/transport.pp": "5117c5d7b0719ac6fffc134175471d5a",
+    "manifests/transport.pp": "1819d2514db2a032d626599900e9d48f",
     "manifests/init.pp": "e78f19983a3dd8e341e86e25dd96c24f",
     "templates/credentials.properties.erb": "1279ad5295762c287a0425fb2155d9bd"
   },
@@ -41,7 +41,7 @@
     }
   ],
   "project_page": "http://github.com/cernops/activemq",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "types": [
 
   ]
