@@ -76,7 +76,7 @@ class activemq::config inherits activemq {
           File["${configdir}/ssl_credentials/activemq_certificate.pem"]
         ],
       }
-      java_ks { 'activemq_cert:truststore':
+      java_ks { 'activemq_ca:truststore':
         ensure       => latest,
         certificate  => "${configdir}/ssl_credentials/ca.pem",
 	trustcacerts => true,

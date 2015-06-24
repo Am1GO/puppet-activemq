@@ -22,8 +22,8 @@
     "manifests/init.pp": "e78f19983a3dd8e341e86e25dd96c24f",
     "templates/credentials.properties.erb": "1279ad5295762c287a0425fb2155d9bd"
   },
-  "name": "CERNOps-activemq",
-  "author": "AmiGO",
+  "name": "AmiGO-activemq",
+  "author": "CERNOps",
   "summary": "Configures Apache MQ",
   "description": "Configures Apache MQ",
   "dependencies": [
