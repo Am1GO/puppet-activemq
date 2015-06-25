@@ -31,22 +31,40 @@
 # === Copyright
 # Steve Traylen, CERN, 2014, steve.traylen@cern.ch
 #
-define activemq::transport ($uri, $configfile = $::activemq::configfile)
+define activemq::transport ($uri,$discoveryUri="", $configfile = $::activemq::configfile)
 {
 
   validate_string($name)
   validate_string($configfile)
   validate_string($uri)
+  validate_string($discoveryUri)
 
-    # Populate activemq file.
-  datacat_fragment{"transport_${name}":
-    target  => $configfile,
-    data    => { transport =>
-                 [ {'name'  => $name,
-                    'uri'   => $uri
-                   }
-                 ]
-               }
-   }
+  if $discoveryUri != ""
+  {
+       # Populate activemq file.
+    datacat_fragment{"transport_${name}":
+      target  => $configfile,
+      data    => { transport =>
+                   [ {'name'  => $name,
+                      'uri'   => $uri,
+                      'discoveryUri'   => $discoveryUri
+                     }
+                   ]
+                 }
+     }
+  }
+  else
+  {
+       # Populate activemq file.
+    datacat_fragment{"transport_${name}":
+      target  => $configfile,
+      data    => { transport =>
+                   [ {'name'  => $name,
+                      'uri'   => $uri
+                     }
+                   ]
+                 }
+     }
+  }
 }
 

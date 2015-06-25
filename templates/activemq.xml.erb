@@ -162,7 +162,7 @@
         -->
         <transportConnectors>
 <% @data['transport'] && @data['transport'].each do |t| -%>
-            <transportConnector name="<%= t['name'] %>" uri="<%= t['uri'] %>"/>
+            <transportConnector <% t and t.each_pair do |k,v|  %><%= k %>="<%= v %>" <% end %>/>
 <% end -%>
         </transportConnectors>
 

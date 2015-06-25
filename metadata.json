@@ -6,19 +6,19 @@
     "manifests/network.pp": "ff8177a2f5dfd00f6ba120a02fda9ab9",
     "manifests/install.pp": "78b14d3e4fb43085c355adac4d6cf4f4",
     "manifests/params.pp": "cc0cbe37dbd2cca8ecbc328802ff7a62",
-    "manifests/config.pp": "e1c7b4b1b3ea1e80e5ed1dd51e380aa1",
+    "manifests/config.pp": "cfaf08e8eff0c349ded727cf3b5930d1",
     "tests/init.pp": "401661128c93f331d6f2e9d801c03c64",
     "README.md": "3b027680d196445a353acf9c6e336775",
     "manifests/user.pp": "fa6c8b10a08b1db281bf49993ffba8d8",
     "LICENSE": "6c4db32a2fa8717faffa1d4f10136f47",
     "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
     "manifests/service.pp": "f50b4116ac7b036639c0b52edefcc1a1",
-    "templates/activemq.xml.erb": "b579edc72f1dc4907af49d818ed61606",
+    "templates/activemq.xml.erb": "41ab1fb3add08d6e27c2b8bb394831b0",
     "manifests/auth.pp": "f5c444ccc32a2d80e3d22f51a9075f5c",
     "CHANGELOG": "d10b3a4004a5d033942e7a9b2d20b8ec",
     "Modulefile": "61ba73377261a5839e1255ba3a78fc66",
     "manifests/policy.pp": "d211055e766b302f1394a54b51dc3bf2",
-    "manifests/transport.pp": "1819d2514db2a032d626599900e9d48f",
+    "manifests/transport.pp": "0110f401757339f7511aaa5918de2aa1",
     "manifests/init.pp": "e78f19983a3dd8e341e86e25dd96c24f",
     "templates/credentials.properties.erb": "1279ad5295762c287a0425fb2155d9bd"
   },
@@ -41,7 +41,7 @@
     }
   ],
   "project_page": "http://github.com/cernops/activemq",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "types": [
 
   ]
